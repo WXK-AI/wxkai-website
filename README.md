@@ -1,6 +1,6 @@
 # WXK — Personal website
 
-An experimental portfolio built with React, Vite, GSAP, and Three.js.
+An experimental portfolio demo built with React, Vite, GSAP, and Three.js.
 
 ## Local development
 
@@ -28,4 +28,6 @@ After the first deployment, add `wxkai.ccwu.cc` under **Custom domains** in the 
 
 ## Customize
 
-The main page content is in `src/App.jsx`; global styling is in `src/styles.css`. Replace the sample projects, email address, and social links before launch.
+Editable biography, project, contact, and social content lives in `src/data/siteContent.js`. Page components live in `src/components`, and global styling is in `src/styles.css`.
+
+The three included projects are explicitly labeled demo experiments. Replace them with real work when it is ready without changing the page layout.
