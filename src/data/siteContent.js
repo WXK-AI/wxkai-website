@@ -4,6 +4,7 @@ export const siteContent = {
   location: 'Kuala Lumpur, Malaysia',
   timezone: 'Asia/Kuala_Lumpur',
   availability: 'Available for selected work',
+  release: 'Demo 01',
   email: 'hello@wxkai.ccwu.cc',
   headline: ['Ideas into', 'motion.'],
   introduction: 'I design and build expressive digital experiences where technology, identity, and culture meet.',

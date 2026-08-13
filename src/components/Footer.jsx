@@ -19,7 +19,7 @@ export default function Footer({ content }) {
 
   return (
     <footer>
-      <p>{content.name} © {new Date().getFullYear()}</p>
+      <p>{content.name} © {new Date().getFullYear()} · {content.release}</p>
       <p>{content.location} · {localTime}</p>
       <div>
         {content.socials.map((social) => (
