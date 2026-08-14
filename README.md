@@ -1,16 +1,18 @@
-# Wong Xin Kai — Personal website
+# Wong Xin Kai — Marked Copy
 
-A portfolio built as a personal control surface rather than a conventional card grid. The first release presents three evidence-backed project instruments:
+A single-document portfolio set as a typeset inspection copy. The opening is a half-title with a documentary plate, then contents, a prefatory note, a Particulars leaf, five chapters, and a colophon. The page is one scroll. Hash routes name the current gathering. An editorial index (`i` or ⌘/Ctrl+K) filters the gatherings; the colophon can print the copy or copy the public address.
 
-- **GenGuard** — a local-first browser extension for detecting and redacting PII before content reaches a GenAI platform.
-- **Langfuse Menubar** — a native macOS observability dashboard with explicit privacy boundaries.
-- **Secure Software Hardening** — a scoped audit, remediation, and retest case study.
+## Work recorded
 
-Razer Viper Control and a safe ransomware behaviour lab appear as smaller experiments.
+- **I. GenGuard** — local PII redaction in the browser. Repository is private.
+- **II. Langfuse Menubar** — read-only macOS observability. Prompt bodies are not shown.
+- **III. Secure Software Hardening** — 28 findings; exactly three remediations.
+- **IV. Razer Viper Control** — independent IOHID utility. Not affiliated with Razer.
+- **V. Safe Ransomware Behaviour Lab** — isolated VMs; fake records only.
 
 ## Stack
 
-React, Vite, and GSAP. The starter also retains the Three.js packages for future interactive scenes.
+React and Vite. Source Serif 4 with IBM Plex Sans Condensed and IBM Plex Mono (latin subsets). No animation library.
 
 ## Local development
 
@@ -26,20 +28,6 @@ npm run lint
 npm run build
 ```
 
-## Cloudflare deployment
+## Content rules
 
-The production site is deployed from the `main` branch. Cloudflare settings:
-
-- Framework preset: `Vite`
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Production branch: `main`
-- Custom domain: `wxkai.ccwu.cc`
-
-Every push to `main` triggers a new production build. Other branches can be used for preview deployments.
-
-## Content structure
-
-Identity and external links live in `src/data/siteContent.js`. Each primary case study has its own component in `src/components`, and the full responsive visual system is in `src/styles.css`.
-
-The GenGuard bench uses clearly labeled fixture data. It demonstrates the product interaction without claiming that the project’s ONNX model is running inside the portfolio page.
+Identity and verified figures live in `src/data`. Particulars states only the selected public facts; the public address is `hello@wxkai.ccwu.cc`. The findings register lists all 28 issues and names only the three remediations published in the brief. The GenGuard specimen is a client pattern matcher, not the shipped ONNX model. There is no résumé download.

@@ -1,58 +1,28 @@
-import { useLayoutEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Navigation from './components/Navigation.jsx'
-import Hero from './components/Hero.jsx'
-import GenGuardInstrument from './components/GenGuardInstrument.jsx'
-import LangfuseInstrument from './components/LangfuseInstrument.jsx'
-import HardeningInstrument from './components/HardeningInstrument.jsx'
-import Experiments from './components/Experiments.jsx'
-import About from './components/About.jsx'
-import Footer from './components/Footer.jsx'
-import { siteContent } from './data/siteContent.js'
+import DocumentShell from './components/DocumentShell.jsx'
+import HalfTitle from './components/HalfTitle.jsx'
+import Contents from './components/Contents.jsx'
+import Preface from './components/Preface.jsx'
+import Particulars from './components/Particulars.jsx'
+import GenGuardChapter from './components/GenGuardChapter.jsx'
+import LangfuseChapter from './components/LangfuseChapter.jsx'
+import HardeningChapter from './components/HardeningChapter.jsx'
+import ViperChapter from './components/ViperChapter.jsx'
+import LabChapter from './components/LabChapter.jsx'
+import Colophon from './components/Colophon.jsx'
 
-gsap.registerPlugin(ScrollTrigger)
-
-function App() {
-  const page = useRef()
-
-  useLayoutEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
-
-    const context = gsap.context(() => {
-      gsap.from('[data-hero-reveal]', {
-        y: 20,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.07,
-        ease: 'power3.out',
-      })
-      gsap.utils.toArray('[data-scroll-reveal]').forEach((element) => {
-        gsap.from(element, {
-          y: 28,
-          opacity: 0,
-          duration: 0.75,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: element, start: 'top 90%', once: true },
-        })
-      })
-    }, page)
-
-    return () => context.revert()
-  }, [])
-
+export default function App() {
   return (
-    <main ref={page}>
-      <Navigation content={siteContent} />
-      <Hero content={siteContent} />
-      <GenGuardInstrument />
-      <LangfuseInstrument />
-      <HardeningInstrument />
-      <Experiments items={siteContent.experiments} />
-      <About content={siteContent} />
-      <Footer content={siteContent} />
-    </main>
+    <DocumentShell>
+      <HalfTitle />
+      <Contents />
+      <Preface />
+      <Particulars />
+      <GenGuardChapter />
+      <LangfuseChapter />
+      <HardeningChapter />
+      <ViperChapter />
+      <LabChapter />
+      <Colophon />
+    </DocumentShell>
   )
 }
-
-export default App
